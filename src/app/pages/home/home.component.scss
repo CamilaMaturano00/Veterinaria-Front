@@ -1,0 +1,123 @@
+.navbar {
+  display: flex;
+  padding: 0 20px;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+header {
+  background: #fff;
+  color: #000000;
+  min-height: 60px;
+  box-shadow: 0 1px #f0f0f0;
+  left: 300px;
+  right: 0;
+  display: flex;
+}
+
+.sidebar {
+  width: 300px;
+  transition: width 0.3s ease;
+  height: 100%;
+  background: #fdf8ef;
+  width: 300px;
+  overflow: hidden;
+  box-shadow: 1px 0 #f0f0f0;
+}
+
+.body-container {
+  position: relative;
+  min-height: calc(100vh - 60px);
+  // background: #fafafb;
+  // background-color: #d0d3d4;
+  background-color: #ebebef;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+}
+
+.custom-button {
+  background-color: #ecc186;
+}
+
+::ng-deep {
+  .p-button.p-button-icon-only {
+    padding: 0;
+    background-color: #f8c471;
+    border-color: #f8c471;
+    width: 35px;
+    height: 35px;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s,
+      box-shadow 0.2s;
+  }
+
+  .p-panelmenu .p-panelmenu-header .p-panelmenu-header-content {
+    background-color: #fdf8ef;
+    border-color: #faeeda;
+
+    &:hover {
+      background-color: #f8c471;
+    }
+  }
+
+  .p-panelmenu
+    .p-panelmenu-header
+    .p-panelmenu-header-content
+    .p-panelmenu-header-action {
+    color: #ecc186;
+    &:hover {
+      color: white;
+    }
+  }
+
+  .p-breadcrumb {
+    background: #ffffff;
+    border: 1px;
+    border-radius: 0px;
+    padding: 0;
+    font-size: 14px;
+  }
+
+  .p-inputtext {
+    font-size: 14px;
+    padding: 7px 35px;
+  }
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  top: 80px;
+  left: 260px;
+  right: 0;
+  z-index: 1023;
+  min-height: 55px;
+  padding: 13px 25px;
+  box-shadow: none;
+  background: #fff;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.container {
+  display: flex;
+  height: 100vh; /* 100% del alto de la pantalla */
+  width: 100vw; /* 100% del ancho de la pantalla */
+}
+
+.hidden {
+  width: 0;
+  overflow: hidden;
+}
+
+.main-content {
+  flex: 1;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.prueba {
+  left: 0;
+}

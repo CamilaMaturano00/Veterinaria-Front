@@ -1,3 +1,79 @@
-<p>
-  login works!
-</p>
+<p-messages class="message-position"></p-messages>
+@if(isLoading){
+<app-loader></app-loader>
+}
+
+<section>
+  <div id="login">
+    <div class="wrapper">
+      <div class="container">
+        <div class="banner-welcome">
+          <span class="banner-title">ClinicPaw </span>
+        </div>
+        <div class="box-login">
+          <div class="form">
+            <form action="" [formGroup]="form">
+              <div class="mg-20 txt-center">
+                <h2 class="fw-500 bgr-label" style="height: 15px">
+                  Iniciar sesión
+                </h2>
+              </div>
+              <div class="flex flex-column gap-2 mg-20">
+                <label for="email" class="fw-500 bgr-label">Usuario</label>
+                <span class="p-input-icon-left">
+                  <i class="pi pi-user"></i>
+                  <input
+                    class="w-100"
+                    pInputText
+                    id="email"
+                    aria-describedby="email-help"
+                    formControlName="email"
+                  />
+                  @if (hasError('email')) {
+                  <span id="password-help" class="invalid"
+                    >Debe ingresar un email válido.</span
+                  >
+                  }
+                </span>
+              </div>
+              <div class="flex flex-column gap-2 mg-20">
+                <label for="password" class="fw-500 bgr-label"
+                  >Contraseña</label
+                >
+                <span class="p-input-icon-left">
+                  <i class="pi pi-lock"></i>
+                  <input
+                    class="w-100"
+                    pInputText
+                    id="password"
+                    aria-describedby="password-help"
+                    type="password"
+                    formControlName="password"
+                  />
+                </span>
+                @if (hasError('password')) {
+                <small class="invalid" id="password-help"
+                  >Debe ingresar una contraseña.</small
+                >
+                }
+              </div>
+              <span class="mg-20 fw-300" style="font-size: 14px"
+                >¿Has olvidado tu contraseña?
+                <a class="bgr-label">Restablecer aquí.</a>
+              </span>
+              <div class="txt-end" style="margin-top: 5px">
+                <p-button
+                  label="Ingresar"
+                  styleClass="p-button-outlined p-button-warning"
+                  (onClick)="save()"
+                  [disabled]="form.invalid"
+                ></p-button>
+              </div>
+            </form>
+          </div>
+          <div class="logo"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

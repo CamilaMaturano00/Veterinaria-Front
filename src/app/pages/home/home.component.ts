@@ -79,6 +79,7 @@ export class HomeComponent implements OnInit {
       {
         label: 'Usuarios',
         icon: 'pi pi-fw pi-user',
+        routerLink: '/users/list',
       },
       {
         label: 'Pacientes',

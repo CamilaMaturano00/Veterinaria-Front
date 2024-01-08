@@ -1,0 +1,11 @@
+.list-users {
+  background-color: white;
+  padding: 20px;
+}
+
+.header {
+  color: #f97316;
+  justify-content: space-between;
+  align-items: center;
+}
+
